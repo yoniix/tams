@@ -1,0 +1,23 @@
+<% #if  signed_in? %>
+  <div class="row">
+    <aside class="span4">
+    <section>
+    </section>
+    <section>
+    </section>
+    </aside>
+  </div>  
+<% #else %>
+  <div class="center hero-unit">
+    <h1>Time and Attendance Management System </h1>
+
+    <h2>
+      This is the home page for the
+    </h2>
+
+    <%= link_to "Sign up now!", signup_path, 
+      class: "btn btn-large btn-primary" %>
+    </div>
+
+    <%= link_to image_tag("rails.png", alt: "Rails"), 'http://tams.com/' %>
+  <% #end %> 
