@@ -1,4 +1,4 @@
-<% #if  signed_in? %>
+<% if  user_signed_in? %>
   <div class="row">
     <aside class="span4">
     <section>
@@ -7,7 +7,7 @@
     </section>
     </aside>
   </div>  
-<% #else %>
+<% else %>
   <div class="center hero-unit">
     <h1>Time and Attendance Management System </h1>
 
@@ -15,9 +15,9 @@
       This is the home page for the
     </h2>
 
-    <%= link_to "Sign up now!", signup_path, 
+    <%= link_to "Sign up now!", new_user_registration_path,
       class: "btn btn-large btn-primary" %>
     </div>
 
     <%= link_to image_tag("rails.png", alt: "Rails"), 'http://tams.com/' %>
-  <% #end %> 
+  <% end %> 
